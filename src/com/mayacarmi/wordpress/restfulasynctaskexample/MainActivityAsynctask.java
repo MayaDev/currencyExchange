@@ -21,9 +21,10 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.widget.TextView;
 
+
 public class MainActivityAsynctask extends Activity {
 
-	final TextView text;
+	TextView text;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -31,9 +32,8 @@ public class MainActivityAsynctask extends Activity {
 		setContentView(R.layout.activity_asynctask);
 		
 		// creating simple user interface
-		// = setContentView(R.id.textView1);//new TextView(this);
-		setContentView(R.id.textView1);
-
+		text = (TextView)findViewById(R.id.textView1);//new TextView(this);
+		
 		class DownloadTask extends AsyncTask<String, Integer, String> {
 
 			@Override
